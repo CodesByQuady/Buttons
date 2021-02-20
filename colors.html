@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<header>
+<title>Quotes</title>
+</header>
+<style>
+
+.modal{
+	display : none;
+	position : fixed;
+	z-index : 1;
+	left : 0;
+	top : 0;
+	width : 100%;
+	height : 100%;
+	overflow : auto;
+	background-color : rgb(0,0,0);
+	background-color : rgba(0,0,0,0.4);
+}
+.modal-content{
+	background-color : #fefefe;
+	margin : 15% auto;
+	padding : 20px;
+	border : 1px solid #888;
+	width : 80%;
+	cursor : pointer;
+	font-family : Times New Roman;
+	font-size : 15px;
+}
+.close{
+	color : #aaa;
+	float : right;
+	font-size : 28px;
+	font-weight : bold;
+}
+.close:bover, .close:focus{
+	color : black;
+	text-decoration : none;
+	cursor: pointer;
+}
+
+body{
+	background-color : whitesmoke;
+}
+main{
+	padding : 5px;
+	margin-bottom : 10px;
+	background-color : white;
+}
+
+button{
+	transition-duration : 0.4s;
+	display : block;
+	padding : 12px 28px;
+	width : 25%;
+	font-size : 25px;
+	font-family : cursive;
+	cursor : pointer;
+	border : none;
+}
+#blueBtn{
+	background-color : white;
+	border : 2px solid royalblue;
+}
+#blueBtn:hover{
+	background-color : royalblue;
+}
+#redBtn{
+	background-color : white;
+	border : 2px solid red;
+}
+#redBtn:hover{
+	background-color : red;
+}
+#greenBtn{
+	background-color : white;
+	border : 2px solid SpringGreen;
+}
+#greenBtn:hover{
+	background-color : SpringGreen;
+}
+#yellowBtn{
+	background-color : white;
+	border : 2px solid yellow;
+}
+#yellowBtn:hover{
+	background-color : yellow;
+}
+#blackBtn{
+	background-color : white;
+	border : 2px solid;
+}
+#blackBtn:hover{
+	background-color : black;
+	color : white;
+}
+</style>
+<div align="center">
+<main>
+<h1>Chose a color.</h1>
+<h2>Each color has a speech about the subject.</h2>
+<h3>*Spolier Alert, its mostly Aristotle quotes.</h3>
+<button type="button" id="blueBtn" onclick="blue();">Hope</button>
+<button type="button" id="redBtn" onclick="red();">Anger</button>
+<button type="button" id="greenBtn" onclick="green();">Cheerful</button>
+<button type="button" id="yellowBtn" onclick="yellow();">Bliss</button>
+<button type="button" id="blackBtn" onclick="black();">War</button>
+
+
+<!-- List of Modals -->
+
+<div id="blueModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<p>
+Hope is where happiness goes when all else has failed. There comes a time where hope
+will become the last straw for events in life. Like hoping to get a new car or hoping
+that everything will be fine. It an emotion that will make one not feel like they failed.
+Its a blessing, but if consumed in hope, comes delusion.<br>
+&dash; Thats my own thoughts.
+</p>
+</div>
+</div>
+<!-- end -->
+<div id="redModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<p>
+"Anybody can become angry &dash; that is easy, but to be angry with the right person and to the right
+and to right degree and at the right time and for the right purpose, and in the right way
+&dash; that is not within everybody's power and is not easy."<br>
+&dash; Aristotle
+</p> 
+</div>
+</div>
+<!-- end -->
+<div id="greenModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<p>"When I am attacked by gloomy thoughts, nothing helps me so much as running to my books,<br>
+They quickly absorb me and banish the clouds from my mind."<br>
+&dash; Monataigne
+</p>
+</div>
+</div>
+<!-- end -->
+<div id="yellowModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<p>
+"Happiness depends upon ourselves."<br>
+&dash; Aristotle
+</p>
+</div>
+</div>
+<!-- end -->
+<div id="blackModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<p>
+"Men must be able to engage in business and go to war, but leisure and peace are better; they must do what is nexessary and indeed what is useful,<br>
+but what us honorable is better. On such principles children and persons of every age requires education should be trained.<br>
+&dash; Aristotle
+</p>
+</div>
+</div>
+<!-- end -->
+
+</main>
+<script>
+function blue(){
+	var bluemodal = document.getElementById('blueModal');
+	var blueBtn = document.getElementById('blueBtn');
+	var span = document.getElementsByClassName("close")[0];
+	blueBtn.onclick = function(){
+		bluemodal.style.display = "block";
+	}
+	span.onclick = function(){
+		bluemodal.style.display = "none";
+	}
+	window.onclick = function(event){
+		if(event.target == bluemodal){
+			bluemodal.style.display = "none";
+		}
+	}
+}
+function red(){
+	var redmodal = document.getElementById('redModal');
+	var redBtn = document.getElementById('redBtn');
+	var span = document.getElementsByClassName("close")[1];
+	redBtn.onclick = function(){
+		redmodal.style.display = "block";
+	}
+	span.onclick = function(){
+		redmodal.style.display = "none";
+	}
+	window.onclick = function(event){
+		if(event.target == redmodal){
+			redmodal.style.display = "none";
+		}
+	}
+}
+function green(){
+	var greenmodal = document.getElementById('greenModal');
+	var greenBtn = document.getElementById('greenBtn');
+	var span = document.getElementsByClassName("close")[2];
+	greenBtn.onclick = function(){
+		greenmodal.style.display = "block";
+	}
+	span.onclick = function(){
+		greenmodal.style.display = "none";
+	}
+	window.onclick = function(event){
+		if(event.target == greenmodal){
+			greenmodal.style.display = "none";
+		}
+	}
+}
+function yellow(){
+	var yellowmodal = document.getElementById('yellowModal');
+	var yellowBtn = document.getElementById('yellowBtn');
+	var span = document.getElementsByClassName("close")[3];
+	yellowBtn.onclick = function(){
+		yellowmodal.style.display = "block";
+	}
+	span.onclick = function(){
+		yellowmodal.style.display = "none";
+	}
+	window.onclick = function(event){
+		if(event.target == yellowmodal){
+			yellowmodal.style.display = "none";
+		}
+	}
+}
+function black(){
+	var blackmodal = document.getElementById('blackModal');
+	var blackBtn = document.getElementById('blackBtn');
+	var span = document.getElementsByClassName("close")[4];
+	blackBtn.onclick = function(){
+		blackmodal.style.display = "block";
+	}
+	span.onclick = function(){
+		blackmodal.style.display = "none";
+	}
+	window.onclick = function(event){
+		if(event.target == blackmodal){
+			blackmodal.style.display = "none";
+		}
+	}
+}
+
+</script>
+<div>
+</html>
